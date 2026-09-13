@@ -50,3 +50,7 @@ export default async function CategoryPage(props: {
     </section>
   );
 }
+export async function generateStaticParams() {
+  // 返回空数组：告诉 Next.js 在构建期无需预渲染静态商品页，直接完成打包
+  return [];
+}
