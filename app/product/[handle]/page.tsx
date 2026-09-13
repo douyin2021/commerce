@@ -147,3 +147,10 @@ async function RelatedProducts({ id }: { id: string }) {
     </div>
   );
 }
+export async function generateStaticParams() {
+  // 如果有固定测试商品：
+  // return [{ handle: 'tirzepatide' }, { handle: 'retatrutide' }];
+
+  // 如果暂时没有商品数据，返回空数组即可通过静态打包编译：
+  return [];
+}
